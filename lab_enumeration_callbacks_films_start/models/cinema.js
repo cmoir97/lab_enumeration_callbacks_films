@@ -9,3 +9,14 @@ Cinema.prototype.filmTitles = function (films) {
     return film.title;
   });
 }
+
+Cinema.prototype.findFilmByTitle = function (films, filmTitle) {
+  const result = films.filter((film) => {
+    if (film.title === filmTitle) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return result[0].title
+}
