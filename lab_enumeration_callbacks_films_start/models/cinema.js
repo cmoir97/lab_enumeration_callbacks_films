@@ -58,3 +58,10 @@ Cinema.prototype.filmLengthCheck = function (films, length) {
   });
   return result[0].title
 }
+
+Cinema.prototype.totalFilmLengths = function (films) {
+  const result = films.reduce((sum, film) => {
+    return sum + film.length;
+  }, 0);
+  return result
+}
