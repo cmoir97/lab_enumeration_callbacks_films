@@ -42,7 +42,12 @@ describe('Cinema', function () {
   });
 
 
-  it('should be able to filter films by genre');
+  it('should be able to filter films by genre', function () {
+    const actual = blackPanther.title
+    assert.strictEqual(actual, cinema.findFilmByGenre(films, 'action'))
+  });
+
+
   it('should be able to check whether there are some films from a particular year');
   it('should be able to check whether there are no films from a particular year');
   it('should be able to check whether all films are over a particular length');

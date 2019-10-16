@@ -20,3 +20,14 @@ Cinema.prototype.findFilmByTitle = function (films, filmTitle) {
   });
   return result[0].title
 }
+
+Cinema.prototype.findFilmByGenre = function (films, genre) {
+  const result = films.filter((film) => {
+    if (film.genre === genre) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return result[0].title
+}
