@@ -31,3 +31,14 @@ Cinema.prototype.findFilmByGenre = function (films, genre) {
   });
   return result[0].title
 }
+
+Cinema.prototype.filmsByYear = function (films, year) {
+  const result = films.filter((film) => {
+    if (film.year === year) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return result[0].title
+}
