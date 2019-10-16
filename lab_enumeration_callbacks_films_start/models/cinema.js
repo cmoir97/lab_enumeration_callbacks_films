@@ -32,9 +32,25 @@ Cinema.prototype.findFilmByGenre = function (films, genre) {
   return result[0].title
 }
 
+
 Cinema.prototype.filmsByYear = function (films, year) {
   const result = films.filter((film) => {
     if (film.year === year) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  if (result.length > 0) {
+    return result[0].title;
+  } else {
+    return "No films from this year"
+  }
+}
+
+Cinema.prototype.filmLengthCheck = function (films, length) {
+  const result = films.filter((film) => {
+    if (film.length > length) {
       return true;
     } else {
       return false;

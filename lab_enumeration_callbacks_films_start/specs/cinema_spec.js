@@ -53,8 +53,17 @@ describe('Cinema', function () {
     assert.strictEqual(actual, cinema.filmsByYear(films, 2016))
   });
 
-  it('should be able to check whether there are no films from a particular year');
-  it('should be able to check whether all films are over a particular length');
+  it('should be able to check whether there are no films from a particular year', function () {
+    const actual = "No films from this year"
+    assert.strictEqual(actual, cinema.filmsByYear(films, 2015))
+  });
+
+  it('should be able to check whether all films are over a particular length', function () {
+    const actual = bladeRunner.title
+    assert.strictEqual(actual, cinema.filmLengthCheck(films, 150))
+  });
+
+
   it('should be able to calculate total running time of all films');
 
 });
